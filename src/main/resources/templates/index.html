@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3 style="color:red;" th:text="${uzenet}"></h3>
+    <h1>Dolgozók</h1>
+    <a href="/uj">Új dolgozót hozzáad</a>
+    <br/><br/>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Név</th>
+            <th>Cím</th>
+            <th>Kor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="dolgozo : ${dolgozok}">
+            <td th:text="${dolgozo.id}"></td>
+            <td th:text="${dolgozo.nev}"></td>
+            <td th:text="${dolgozo.cim}"></td>
+            <td th:text="${dolgozo.kor}"></td>
+            <td>
+                <a th:href="@{'/edit/'+${dolgozo.id}}">Edit</a>&nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/delete/'+${dolgozo.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
