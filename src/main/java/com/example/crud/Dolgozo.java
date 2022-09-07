@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Dolgozo {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)	// AUTO_INCREMENT
+    @GeneratedValue(strategy=GenerationType.IDENTITY)	// AUTO_INCREMENT.
     private int id;
     private String nev;
     private String cim;
