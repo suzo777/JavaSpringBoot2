@@ -1,7 +1,8 @@
 package com.example.crud;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
-@Service
+
+@Repository
 public interface DolgRepo extends CrudRepository<Dolgozo, Integer> {
 }
